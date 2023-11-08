@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formatowanie</title>
+
+        <link rel="stylesheet" href="styl2.css">
+    </head>
+    <body>
+
+        <div id="banner">
+            <h1>Formatowanie dokumentów HTML</h1>
+        </div>
+        <div id="header">
+            <div class="header-left">
+                <h2>Przykład listy - hobby</h2>
+                <ul>
+                    <li>muzyka</li>
+                    <li>turystyka
+                        <ol>
+                            <li>góry</li>
+                            <li>jeziora</li>
+                            <li>na rowerze</li>
+                        </ol>
+                    </li>
+                    <li>ksiażki</li>
+                </ul>
+            </div>
+            <div class="header-center">
+                <h2>Przykład tabeli - rozkład dnia</h2>
+                <table>
+                    <tr>
+                        <th>Pora dnia</th>
+                        <th>obowiązki</th>
+                    </tr>
+                    <tr>
+                        <td>rano</td>
+                        <td>nauka</td>
+                    </tr>
+                    <tr>
+                        <td>południe</td>
+                        <td>zajęcia dodatkowe</td>
+                    </tr>
+                    <tr>
+                        <td>popołudnie</td>
+                        <td rowspan="2">moje hobby</td>
+                    </tr>
+                    <tr>
+                        <td>wieczór</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="header-right">
+                <img src="napisy.png" alt="technologia web">
+            </div>
+        </div>
+        <div id="cont">
+            <p>
+                Podaj rozmiar tekstu w procentach: <input type="number" id="procent"> %
+            </p>
+            <p>
+                <select id="rodzaj">
+                    <option value="normal">prosty</option>
+                    <option value="italic">kursywa</option>
+                </select>
+            </p>
+            <p>
+                <input type="checkbox" id="bold" name="1">Pogrubienie
+            </p>
+            <p>
+                Jakim kolorem sformatować tekst? Wybierz przycisk<br/>
+                <button class="btn1" onclick="calc('red')"></button>
+                <button class="btn2" onclick="calc('green')"></button>
+                <button class="btn3" onclick="calc('blue')"></button>
+                <button class="btn4" onclick="calc('black')"></button>
+            </p>
+
+            <p id="res">To jest przykład paragrafu, który może być dowolnie formatowany przez JavaScript</p>
+        </div>
+        <div id="footer">
+            <p>Formatowaniem tekstu zajmował się: <i>000000000</i></p>
+            <a href="http://youtube.com" target="_blank">Odwiedź także</a>
+        </div>
+
+        <script>
+            function calc(colorF){
+                var color = colorF;
+
+                var resP = document.getElementById("res");
+                var procent = parseInt(document.getElementById("procent").value);
+                var rodzaj = document.getElementById("rodzaj").value;
+                var bold1 = document.getElementById("bold").checked;
+
+                resP.style.color = color;
+                resP.style.fontSize = procent + "%";
+                resP.style.fontStyle = rodzaj;
+                resP.style.fontWeight = bold1 ? "bold" : "normal";
+            }
+        </script>
+        
+    </body>
+</html>

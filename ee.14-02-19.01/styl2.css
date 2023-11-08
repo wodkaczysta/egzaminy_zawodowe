@@ -1,0 +1,95 @@
+body{
+    font-family: Georgia;
+}
+
+#banner{
+    background-color: #824555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header-left, .header-center{
+    background-color: #A26475;
+    color: white;
+    width: 30%;
+    height: 300px;
+
+    float: left;
+}
+
+.header-right{
+    background-color: #A26475;
+    color: white;
+    width: 40%;
+    height: 300px;
+    text-align: right;
+
+    float: left;
+}
+
+#cont{
+    background-color: #F0EAE2;
+    padding: 50px;
+
+    clear: both;
+}
+
+#footer{
+    background-color: #824555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+table, th, td{
+    border: 2px solid #69293A;
+    padding: 7px;
+    border-collapse: collapse;
+}
+
+ul li{
+    list-style-type: square;
+}
+
+ol li{
+    list-style-type: inherit;
+}
+
+.btn1{
+    height: 15px;
+    background-color: red;
+}
+
+.btn2{
+    height: 15px;
+    background-color: green;
+}
+
+.btn3{
+    height: 15px;
+    background-color: blue;
+}
+.btn4{
+    height: 15px;
+    background-color: black;
+}
+
+@media (max-width: 1000px) {
+    .header-left, .header-center{
+        width: 50%;
+
+        float: left;
+    }
+        
+    .header-right{
+        width: 100%;
+        text-align: center;
+
+        clear: both;
+    }
+
+    img{
+        width: 500px;
+    }
+}
