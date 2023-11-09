@@ -9,4 +9,6 @@ if(!empty($_POST['imie']) && !empty($_POST['nazwisko']) && !empty($_POST['telefo
 	mysqli_query($con, $ask);
 }
 mysqli_close($con);
+header('Location: http://localhost/egzamin/rejestracja.html');
+exit;
 ?>
